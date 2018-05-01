@@ -28,21 +28,14 @@ AddSubClass("sorcerer", "Chaos", {
 			name : "Chaotic origin",
 			source : ["HB", 0],
 			minlevel : 1,
-			description : "\n   " + "Choose a death attribute using the \"Choose Feature\" button above" + "\n   " + "When interacting with elementals, if I can add my proficiency bonus, I can double it",
-		},
-		"subclassfeature1.1" : {
-			name : "chaotic Resilience",
-			source : ["HB", 0],
-			minlevel : 1,
-			description : "\n   " + "When I am not wearing armor, I have a 5% chance to not be affected by any magic" + "\n   " + "My hit point maximum increases by an amount equal to my sorcerer level",
-			additional : "like draconic resilience" //so that the bonus hp is calculated
+			description : "\n   " +  "When interacting with elementals, if I can add my proficiency bonus, I can double it",
 		},
 		"subclassfeature6" : {
 			name : "Elemental Affinity",
 			source : ["HB", 0],
 			minlevel : 6,
-			description : "\n   " + "Choose a Primordial Ancestor using the \"Choose Feature\" button above" + "\n   " + "I add Cha mod for spell damage if matching my primordial ancestor's affiliated type" + "\n   " + "I can spend 1 sorcery point to gain resistance to my ancestor's affiliated type",
-			choices : ["acid", "cold", "fire", "lightning", "poison"],
+			description : "\n   " + "Choose a Chaotic element using the \"Choose Feature\" button above" + "\n   " + "\n   " + "I gain resistance to my affiliated type",
+			choices : ["acid", "cold", "fire", "lightning", "poison", ""],
 			choicesNotInMenu : true,
 			"acid" : {
 				name : "Acid Elemental Affinity",

@@ -5,7 +5,7 @@
 	-KEEP IN MIND-
 	It is recommended to enter the code in a fresh sheet before adding any other information (i.e. before making your character with it).
 */
- 
+
 /*  -INFORMATION-
 	Subject:	Subclass
 	Effect:		This script adds a new bloodline for the Sorcerer, called "Blood of the Primordials"
@@ -19,48 +19,22 @@
 var iFileName = "Sorcerer - Blood of the Primordials [by Cain].js";
 RequiredSheetVersion(12.999);
 
-AddSubClass("sorcerer", "blood of the primordials", {
-	regExpSearch : /^(?=.*(sorcerer|witch))(?=.*primordials?).*$/i,
-	subname : "Blood of the Primordials",
+AddSubClass("sorcerer", "Chaos", {
+	regExpSearch : /^(?=.*(sorcerer|witch))(?=.*chaos?).*$/i,
+	subname : "Chaotic Blood",
 	source : ["HB", 0],
 	features : {
 		"subclassfeature1" : {
-			name : "Primordial Ancestor",
+			name : "Chaotic origin",
 			source : ["HB", 0],
 			minlevel : 1,
-			description : "\n   " + "Choose a Primordial Ancestor using the \"Choose Feature\" button above" + "\n   " + "When interacting with elementals, if I can add my proficiency bonus, I can double it",
-			choices : ["Akadi", "Grumbar", "Istishia", "Kossuth"],
-			"akadi" : {
-				name : "Akadi",
-				description : "\n   " + "I have primordial ancestry from the goddess Akadi, who is affiliated with lightning" + "\n   " + "When interacting with elementals, if I can add my proficiency bonus, I can double it",
-				eval : "var ToAdd = [\"sorcerer\", \"subclassfeature6\", \"lightning\"]; if (classes.known.sorcerer.level >= 6 && tDoc.getField(\"Class Features Remember\").value.indexOf(ToAdd.slice(0,3).toString()) === -1) {ClassFeatureOptions(ToAdd)};",
-				primordialElement : "lightning"
-			},
-			"grumbar" : {
-				name : "Grumbar",
-				description : "\n   " + "I have primordial ancestry from the god Grumbar, who is affiliated with acid damage" + "\n   " + "When interacting with elementals, if I can add my proficiency bonus, I can double it",
-				eval : "var ToAdd = [\"sorcerer\", \"subclassfeature6\", \"acid\"]; if (classes.known.sorcerer.level >= 6 && tDoc.getField(\"Class Features Remember\").value.indexOf(ToAdd.slice(0,3).toString()) === -1) {ClassFeatureOptions(ToAdd)};",
-				primordialElement : "acid"
-			},
-			"istishia" : {
-				name : "Istishia",
-				description : "\n   " + "I have primordial ancestry from the goddess Istishia, who is affiliated with cold damage" + "\n   " + "When interacting with elementals, if I can add my proficiency bonus, I can double it",
-				eval : "var ToAdd = [\"sorcerer\", \"subclassfeature6\", \"cold\"]; if (classes.known.sorcerer.level >= 6 && tDoc.getField(\"Class Features Remember\").value.indexOf(ToAdd.slice(0,3).toString()) === -1) {ClassFeatureOptions(ToAdd)};",
-				primordialElement : "cold"
-			},
-			"kossuth" : {
-				name : "Kossuth",
-				description : "\n   " + "I have primordial ancestry from the god Kossuth, who is affiliated with fire damage" + "\n   " + "When interacting with elementals, if I can add my proficiency bonus, I can double it",
-				eval : "var ToAdd = [\"sorcerer\", \"subclassfeature6\", \"fire\"]; if (classes.known.sorcerer.level >= 6 && tDoc.getField(\"Class Features Remember\").value.indexOf(ToAdd.slice(0,3).toString()) === -1) {ClassFeatureOptions(ToAdd)};",
-				primordialElement : "fire"
-			},
-			languageProfs : ["Primordial"]
+			description : "\n   " + "Choose a death attribute using the \"Choose Feature\" button above" + "\n   " + "When interacting with elementals, if I can add my proficiency bonus, I can double it",
 		},
 		"subclassfeature1.1" : {
-			name : "Primordial Resilience",
+			name : "chaotic Resilience",
 			source : ["HB", 0],
 			minlevel : 1,
-			description : "\n   " + "When I am not wearing armor, my AC is 13 + Dexterity modifier" + "\n   " + "My hit point maximum increases by an amount equal to my sorcerer level",
+			description : "\n   " + "When I am not wearing armor, I have a 5% chance to not be affected by any magic" + "\n   " + "My hit point maximum increases by an amount equal to my sorcerer level",
 			additional : "like draconic resilience" //so that the bonus hp is calculated
 		},
 		"subclassfeature6" : {

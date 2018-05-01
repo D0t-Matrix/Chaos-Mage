@@ -28,7 +28,7 @@ AddSubClass("sorcerer", "Chaos", {
 			name : "Chaotic origin",
 			source : ["HB", 0],
 			minlevel : 1,
-			description : "\n   " +  "When casting a spell, i can choose to have the DM roll from the full list of spells of the corresponding Spell level to decide what spell is cast." + "\n When I choose a specific known spell to cast, there is a 25% chance that it will manifest a wild surge as well. I can elect to negate this by spending 1 sorcery point.",
+			description : "When casting a spell, i can choose to have the DM roll from the full list of spells of the corresponding Spell level to decide what spell is cast." + "\n When I choose a specific known spell to cast, there is a 25% chance that it will manifest a wild surge as well. I can elect to negate this by spending 1 sorcery point.",
 		},
 	},
   spellcastingKnown : {

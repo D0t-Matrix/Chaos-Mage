@@ -16,7 +16,7 @@
     Date:		2017-11-29 (sheet v12.999)
 */
 
-var iFileName = "Sorcerer - Blood of the Primordials [by Cain].js";
+var iFileName = "Chaos Mage.js";
 RequiredSheetVersion(12.999);
 
 AddSubClass("sorcerer", "Chaos", {
@@ -32,7 +32,7 @@ AddSubClass("sorcerer", "Chaos", {
 		},
 	},
   spellcastingKnown : {
-			cantrips : [4, 4, 4, 5, 5, 5, 5, 5, 5, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6],
+			cantrips : [2, 2, 2, 3, 3, 3, 3, 3, 3, 3, 4, 4, 4, 4, 4, 4, 4, 4, 4, 5],
 			spells : [0, 1, 2, 3, 3, 4, 4, 4, 4, 4, 5, 5, 6, 6, 6, 7, 7, 8, 8, 10]
 		},
 });
